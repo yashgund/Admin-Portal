@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+  <link rel="shortcut icon" href="../public/img/Capture1.JPG" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="../scss/style.css" />
+    <title>Rotaract Portal</title>
+  </head>
+  <body class="bg-dark">
+    <nav class="navbar bg-dark">
+      <h1>
+        <a href="/"><i class="fas fa-hands-helping"></i> Rotaractors</a>
+      </h1>
+      <ul>
+        <li><a href="/profiles">Board</a></li>
+        <li><a href="/register">Register</a></li>
+        <li><a href="/user/login">Login</a></li>
+      </ul>
+    </nav>
+    <section class="container">
+      <h1 class="large text-primary">
+        Board Members
+      </h1>
+      <p class="lead">
+        <i class="fab fa-connectdevelop"></i> Know Your Board (2021-22)
+      </p>
+      
+      <div class="profiles">
+        <% RtrList.forEach(RaC => {%>
+        <div class="profile bg-light">
+          <img
+            class="round-img "
+            src="../img/default.png"
+            alt="proflie picture" 
+          />
+          <div>
+              <h2><%= RaC.name %></h2>
+            <p><%= RaC.post %></p>
+            <p><%= RaC.department %></p>
+              
+            <h2></h2>
+            <a href="/<%= RaC._id%>" class="btn btn-primary" style= " font-size: 0.7rem;">
+              View Profile
+            </a>
+          </div>
+          
+        </div>
+        <%})%>
+        
+         <!-- <div class="profile bg-light">
+          <img
+          class="round-img"
+          src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200"
+          alt=""
+          /> -->
+
+          <!-- <div>
+            <h2>John Doe</h2>
+            <p>Developer at Microsoft</p>
+            <p>Seattle, WA</p>
+            <a href="/profile" class="btn btn-primary" style= " font-size: 0.7rem;">
+              View Profile
+            </a>
+          </div> 
+
+           <ul>
+            <li class="text-primary"><i class="fas fa-check"></i> HTML</li>
+            <li class="text-primary"><i class="fas fa-check"></i> CSS</li>
+            <li class="text-primary">
+              <i class="fas fa-check"></i> JavaScript
+            </li>
+            <li class="text-primary"><i class="fas fa-check"></i> Python</li>
+          </ul>
+        </div>  -->
+      </div>
+    </section>
+  </body>
+</html>
